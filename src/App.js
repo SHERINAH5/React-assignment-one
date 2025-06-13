@@ -1,14 +1,26 @@
-import React  from 'react';
-import './great.css';
+import React from 'react';
+import './Greet.css';
 
-function Great({name, age, address}) {
-  console.log(name, 'name')
+function App() {
+  const students = [
+    { name: 'ARINDA', age: 27, school: 'WITI', address: 'Kampala' },
+    { name: 'Ruth', age: 18, school: 'Namirembe', address: 'Entebbe' },
+    { name: 'Lynnet', age: 20, school: 'Trinity', address: 'Mbale' }
+  ];
+
   return (
-    <div className='great-card'>
-      <h1>Hello {name}</h1>
-      <h2>I am {age} old</h2>
+    <div>
+      {students.map((student, index) => (
+        <greet
+          key={index}
+          name={student.name}
+          age={student.age}
+          school={student.school}
+          address={student.address}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
-export default Great;
+export default App;
