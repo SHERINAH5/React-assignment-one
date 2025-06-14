@@ -1,5 +1,5 @@
 import React from 'react';
-import './Greet.css';
+import Greet from './Greet'; 
 
 function App() {
   const students = [
@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       {students.map((student, index) => (
-        <greet
+        <Greet
           key={index}
           name={student.name}
           age={student.age}
