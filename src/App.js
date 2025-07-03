@@ -1,5 +1,10 @@
 import React from 'react';
-import Greet from './Greet'; 
+import Greet from './Greet';
+import Garage from './Garage';
+import { MissedGoal } from './Goal/MissedGoal';
+import InputForm from './InputForm';        
+import TextareaForm from './TextareaForm';  
+import SelectForm from './SelectForm';
 
 function App() {
   const students = [
@@ -8,8 +13,11 @@ function App() {
     { name: 'Lynnet', age: 20, school: 'Trinity', address: 'Mbale' }
   ];
 
+  const myCars = ["Toyota", "Honda", "Ford"];
+
   return (
     <div>
+      {/* Loop through students */}
       {students.map((student, index) => (
         <Greet
           key={index}
@@ -19,6 +27,15 @@ function App() {
           address={student.address}
         />
       ))}
+
+      
+      <InputForm />
+      <TextareaForm />
+      <SelectForm/>
+
+      <Garage cars={myCars} />
+      <MissedGoal />
+
     </div>
   );
 }

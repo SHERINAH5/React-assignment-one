@@ -1,0 +1,9 @@
+.form{
+    padding-top: 10px;
+    border: 4px solid rgb(216, 199, 200);
+    margin-left: 20rem;
+    width: 250px;
+}
+.input{
+    width: 240px;
+}
